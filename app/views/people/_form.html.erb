@@ -1,0 +1,11 @@
+<%= form_for @person do |form| %>
+  <%= @person.errors.full_messages %>
+  <%= form.label :first_name %>
+  <%= form.text_field :first_name %>
+  <% if params[:action].eql? "edit" %>
+    <%= form.submit "Edit Person" %>
+  <% else %>
+    <%= form.submit "Create Person" %>
+  <% end %>
+<% end %>
+
